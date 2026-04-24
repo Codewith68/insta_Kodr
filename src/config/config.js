@@ -16,6 +16,7 @@ const config = {
   PORT: process.env.PORT || 3000,
   MONGO_URI: process.env.MONGO_URI || "mongodb://localhost:27017/mydatabase",
   NODE_ENV: process.env.NODE_ENV || "development",
+  FRONTEND_URL: process.env.FRONTEND_URL || "http://localhost:5173",
   ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET || process.env.JWT_SECRET || "jwtsecretkey",
   REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET || process.env.JWT_SECRET || "jwtsecretkey",
   ACCESS_TOKEN_EXPIRES_IN: process.env.ACCESS_TOKEN_EXPIRES_IN || "15m",

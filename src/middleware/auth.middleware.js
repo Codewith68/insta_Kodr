@@ -15,7 +15,7 @@ export const auth = async (req, res, next) => {
   try {
     const accessToken = getBearerToken(req);
 
-    if (!accessToken) {
+    if (!accessToken || accessToken === "null" || accessToken === "undefined") {
       return res.status(401).json({ message: "Access token is required" });
     }
 
@@ -35,7 +35,9 @@ export const auth = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
-    console.log(error);
+    if (error.name !== "JsonWebTokenError" && error.name !== "TokenExpiredError") {
+      console.log(error);
+    }
     return res.status(401).json({ message: "Invalid or expired access token" });
   }
 };
