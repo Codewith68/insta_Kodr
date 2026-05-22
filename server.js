@@ -8,7 +8,6 @@ const server = http.createServer(app);
 
 // Initialize Socket.IO on the HTTP server
 initSocket(server);
-
 server.listen(config.PORT, () => {
   console.log(`Server running on port ${config.PORT}`);
   connectDB();
