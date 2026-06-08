@@ -24,7 +24,6 @@ app.use(cors(
     credentials:true,
   }
 ))
-
 passport.use(
   new GoogleStrategy(
     {
