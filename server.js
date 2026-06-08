@@ -3,7 +3,6 @@ import app from "./src/app.js";
 import config from "./src/config/config.js";
 import { connectDB } from "./src/config/db.config.js";
 import { initSocket } from "./src/socket.js";
-
 const server = http.createServer(app);
 
 // Initialize Socket.IO on the HTTP server
