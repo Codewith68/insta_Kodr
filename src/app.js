@@ -10,7 +10,6 @@ import cors from 'cors';
 import router from './routes/user.route.js';
 import storyRouter from './routes/story.route.js';
 import messageRouter from './routes/message.route.js';
-
 const app=express();
 
 app.use(morgan('dev'));
