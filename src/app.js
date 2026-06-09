@@ -11,7 +11,6 @@ import router from './routes/user.route.js';
 import storyRouter from './routes/story.route.js';
 import messageRouter from './routes/message.route.js';
 const app=express();
-
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
