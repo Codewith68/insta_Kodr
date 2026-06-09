@@ -36,7 +36,6 @@ passport.use(
     },
   ), 
 ); 
-
 app.use("/api/auth",authRouter)
 app.use("/api/posts", postRouter)
 app.use("/api/users",router)
